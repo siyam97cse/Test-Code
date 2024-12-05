@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#include<graphics.h>
+#include<conio.h>
+
+using namespace std;
+
+int main() {
+    int gDriver = DETECT;
+    int gMode;
+    initgraph(&gDriver, &gMode, "");
+
+    int P[2][2] = { {50, 50}, {150, 150} };
+    int T[] = {20, 50};
+
+    setcolor(WHITE);
+
+    rectangle(P[0][0], P[0][1], P[1][0], P[1][1]);
+
+    P[0][0] += T[0];
+    P[0][1] += T[1];
+    P[1][0] += T[0];
+    P[1][1] += T[1];
+
+    setcolor(GREEN);
+
+    rectangle(P[0][0], P[0][1], P[1][0], P[1][1]);
+
+    getch();
+    closegraph();
+
+    return 0;
+}
+

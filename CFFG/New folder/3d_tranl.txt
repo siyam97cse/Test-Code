@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <graphics.h>
+#include <math.h>
+
+void trans();
+int maxx,maxy,midx,midy;
+int main()
+
+{
+            int ch;
+            int gd=DETECT,gm;
+            detectgraph(&gd,&gm);
+            initgraph(&gd,&gm," ");
+            trans();
+            getch();
+return 0;
+}
+
+void trans()
+            int x,y,x1,x2,y1,y2;
+            bar3d(50,50,150,150,20,1);
+            printf("Enter translation factor");
+            scanf("%d%d",&x,&y);
+            printf("After translation:");
+            bar3d(50+x ,50+y, 150+x,   150+y,    20,     1);
+
+}
